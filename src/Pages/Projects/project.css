@@ -233,6 +233,10 @@
   line-height: 23px;
 }
 
+.title{
+  text-align: center;
+}
+
 @media (max-width: 800px) {
   .projects-section {
     width: 90%;

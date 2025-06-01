@@ -107,7 +107,7 @@ function ProjectDetail() {
           />
         ))}
       </div>
-      <h1>{project.title}</h1>
+      <h1 className="title">{project.title}</h1>
       {project.description && (
         <p className="descriptionP">
           <strong className="newLine">Description</strong> {project.description}
