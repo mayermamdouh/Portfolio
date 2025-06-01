@@ -1,0 +1,125 @@
+.navbar-container {
+  position: sticky;
+  z-index: 100;
+}
+
+.toggleButton {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: #fff;
+  background-color: var(--first-color);
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  width: 80px;
+}
+.toggleButton:hover{
+  background-color: hsl(353, 58%, 52%);
+}
+
+.navbar {
+  min-width: 40%;
+  max-width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid gray;
+  border-radius: 20px;
+  margin: 10px auto;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-list {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  gap: 5px;
+}
+.navbar-list li {
+  position: relative;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-list li:hover {
+  transform: scale(1.1);
+}
+
+.navbar-list li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar-list li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--yellow-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-list li a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 20px;
+  user-select: none;
+  color: var(--title-color);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+    min-width: 100%;
+    max-width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-list {
+    height: 0px;
+    visibility: hidden;
+    flex-direction: column;
+    background-color: var(--body-color);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .navbar-list.open {
+    height: 350px;
+    visibility: visible;
+    background-color: var(--body-color);
+  }
+
+  .navbar-list li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}

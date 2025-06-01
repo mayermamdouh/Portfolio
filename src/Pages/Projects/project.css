@@ -1,0 +1,256 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+}
+
+.projects-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 80%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% / 2 - 20px);
+  border-radius: 20px;
+  color: var(--text-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  background-color: var(--container-color);
+  animation: project 0.6s ease forwards;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.project-container:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.project-container:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.project-container:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.project-container:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.project-container:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.project-card {
+  height: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+  transform 0.3s ease-in-out;
+}
+
+.project-card:hover{
+  transform: scale(1.04);
+}
+
+.project-1 {
+  background-image: url(../../assets/gheark.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.project-2 {
+  background-image: url(../../assets/exam-system.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.project-3 {
+  background-image: url(../../assets/IEEE.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.project-4 {
+  background-image: url(../../assets/Portfolio.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.project-5 {
+  background-image: url(../../assets/event_app.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.github-word {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s 0.1s ease;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  color: white;
+  font-size: 13px;
+  background-color: var(--first-color);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 1;
+}
+
+.background {
+  background-color: hsl(244, 16%, 43%);
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.project-title {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  transition: all 0.4s 0.1s ease;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-weight: 600;
+}
+
+.circle-yellow {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--yellow-color);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.project-1:hover .github-word,
+.project-2:hover .github-word,
+.project-3:hover .github-word,
+.project-4:hover .github-word,
+.project-5:hover .github-word {
+  height: 30px;
+  padding: 5px;
+}
+
+.project-1:hover .background,
+.project-2:hover .background,
+.project-3:hover .background,
+.project-4:hover .background,
+.project-5:hover .background {
+  opacity: 0.92;
+  width: 100%;
+  height: 100%;
+}
+
+.project-1:hover .project-title,
+.project-2:hover .project-title,
+.project-3:hover .project-title,
+.project-4:hover .project-title,
+.project-5:hover .project-title {
+  top: 50%;
+  opacity: 1;
+}
+
+.project-1:hover .circle-yellow,
+.project-2:hover .circle-yellow,
+.project-3:hover .circle-yellow,
+.project-4:hover .circle-yellow,
+.project-5:hover .circle-yellow {
+  opacity: 1;
+}
+
+/* Project Details */
+
+.project-detail {
+  background-color: var(--container-color);
+  margin: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  gap: 20px;
+}
+
+.photos{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.photo{
+  border-radius: 5px;
+  width: 150px;
+  height: 150px;
+  object-fit:fill;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.newLine{
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.descriptionP{
+  text-align: center;
+  line-height: 23px;
+}
+
+@media (max-width: 800px) {
+  .projects-section {
+    width: 90%;
+  }
+  .project-container {
+    height: 300px;
+  }
+}
+
+@keyframes project {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
