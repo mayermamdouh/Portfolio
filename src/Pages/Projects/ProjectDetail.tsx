@@ -24,11 +24,11 @@ const projectData: Record<string, Project> = {
     date: "October 2024",
     link: "https://github.com/mayermamdouh/Engine-Parts-Sales-Platform",
     photos: [
-      "/src/assets/engine-1.jpeg",
-      "/src/assets/engine-2.jpeg",
-      "/src/assets/engine-3.jpeg",
-      "/src/assets/engine-4.jpeg",
-      "/src/assets/engine-5.jpeg",
+      "/assets/engine-1.jpeg",
+      "/assets/engine-2.jpeg",
+      "/assets/engine-3.jpeg",
+      "/assets/engine-4.jpeg",
+      "/assets/engine-5.jpeg",
     ],
   },
   "ai-exam": {
@@ -39,17 +39,17 @@ const projectData: Record<string, Project> = {
     date: "June 2023 – May 2024",
     link: "https://github.com/mayermamdouh/Graduation_Project_Examination_Platform",
     photos: [
-      "/src/assets/grad-1.jpeg",
-      "/src/assets/grad-2.jpeg",
-      "/src/assets/grad-3.jpeg",
-      "/src/assets/grad-4.jpeg",
-      "/src/assets/grad-5.jpeg",
-      "/src/assets/grad-6.jpeg",
-      "/src/assets/grad-7.jpeg",
-      "/src/assets/grad-8.jpeg",
-      "/src/assets/grad-9.jpeg",
-      "/src/assets/grad-10.jpeg",
-      "/src/assets/grad-11.jpeg",
+      "/assets/grad-1.jpeg",
+      "/assets/grad-2.jpeg",
+      "/assets/grad-3.jpeg",
+      "/assets/grad-4.jpeg",
+      "/assets/grad-5.jpeg",
+      "/assets/grad-6.jpeg",
+      "/assets/grad-7.jpeg",
+      "/assets/grad-8.jpeg",
+      "/assets/grad-9.jpeg",
+      "/assets/grad-10.jpeg",
+      "/assets/grad-11.jpeg",
     ],
   },
   "sentiment-analysis": {
@@ -63,7 +63,7 @@ const projectData: Record<string, Project> = {
       href: "https://ieeexplore.ieee.org/document/10485056",
       text: "IEEE",
     },
-    photos: ["/src/assets/IEEE.png"],
+    photos: ["/assets/IEEE.png"],
   },
   portfolio: {
     title: "Personal Portfolio Website",
@@ -82,7 +82,7 @@ const projectData: Record<string, Project> = {
     date: "May 2025",
     link: "https://github.com/mayermamdouh/ATC_01210567733",
 
-    photos: ["/src/assets/event-1.png", "/src/assets/event-2.png"],
+    photos: ["/assets/event-1.png", "/assets/event-2.png"],
   },
 };
 
