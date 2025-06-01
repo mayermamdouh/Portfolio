@@ -1,5 +1,5 @@
 import "./education.css";
-import imageGraduated from "../../assets/graduated.png";
+import imageGraduated from "/assets/graduated.png";
 
 function Education() {
   return (

@@ -70,35 +70,35 @@
 }
 
 .project-1 {
-  background-image: url(../../assets/gheark.png);
+  background-image: url(/assets/gheark.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .project-2 {
-  background-image: url(../../assets/exam-system.jpeg);
+  background-image: url(/assets/exam-system.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .project-3 {
-  background-image: url(../../assets/IEEE.png);
+  background-image: url(/assets/IEEE.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .project-4 {
-  background-image: url(../../assets/Portfolio.png);
+  background-image: url(/assets/Portfolio.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .project-5 {
-  background-image: url(../../assets/event_app.png);
+  background-image: url(/assets/event_app.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

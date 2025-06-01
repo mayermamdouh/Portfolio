@@ -1,7 +1,7 @@
 // import smallPhoto from "../assets/smallPhoto.jpg";
 import "./home.css";
 import Shapes from "./Shapes";
-import personalImage from "../../assets/smallPhoto.jpg";
+import personalImage from "/assets/smallPhoto.jpg";
 import HeaderSocials from "./Socials";
 
 function HomePage() {
