@@ -1,4 +1,3 @@
-
 import HomePage from "./Pages/home/home";
 import Appbar from "./Pages/navbar/navbar";
 import About from "./Pages/About/about";

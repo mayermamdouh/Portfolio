@@ -67,39 +67,34 @@
   transform: scale(1.04);
 }
 
-.project-1 {
-  background-image: url(/assets/gheark.png);
+.project-item {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.project-1 {
+  background-image: url(/assets/foodOrderingApp.png);
 }
 
 .project-2 {
-  background-image: url(/assets/exam-system.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(/assets/gheark.png);
 }
 
 .project-3 {
-  background-image: url(/assets/IEEE.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(/assets/exam-system.jpeg);
 }
 
 .project-4 {
-  background-image: url(/assets/Portfolio.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(/assets/IEEE.png);
 }
 
 .project-5 {
+  background-image: url(/assets/Portfolio.png);
+}
+
+.project-6 {
   background-image: url(/assets/event_app.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .github-word {
@@ -157,7 +152,8 @@
 .project-2:hover .github-word,
 .project-3:hover .github-word,
 .project-4:hover .github-word,
-.project-5:hover .github-word {
+.project-5:hover .github-word,
+.project-6:hover .github-word {
   height: 30px;
   padding: 5px;
 }
@@ -166,7 +162,8 @@
 .project-2:hover .background,
 .project-3:hover .background,
 .project-4:hover .background,
-.project-5:hover .background {
+.project-5:hover .background,
+.project-6:hover .background {
   opacity: 0.92;
   width: 100%;
   height: 100%;
@@ -176,7 +173,8 @@
 .project-2:hover .project-title,
 .project-3:hover .project-title,
 .project-4:hover .project-title,
-.project-5:hover .project-title {
+.project-5:hover .project-title,
+.project-6:hover .project-title {
   top: 50%;
   opacity: 1;
 }
@@ -185,7 +183,8 @@
 .project-2:hover .circle-yellow,
 .project-3:hover .circle-yellow,
 .project-4:hover .circle-yellow,
-.project-5:hover .circle-yellow {
+.project-5:hover .circle-yellow,
+.project-6:hover .circle-yellow {
   opacity: 1;
 }
 
@@ -233,7 +232,7 @@
   line-height: 23px;
 }
 
-.title{
+.title {
   text-align: center;
 }
 

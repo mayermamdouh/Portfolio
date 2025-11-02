@@ -1,4 +1,5 @@
 import "./Skills.css";
+import { useEffect, useRef } from "react";
 import javascript from "/assets/javascript.svg";
 import typescript from "/assets/typescript.svg";
 import react from "/assets/react.svg";
@@ -23,109 +24,83 @@ import ps from "/assets/problem-solving.png";
 import ct from "/assets/critical-thinking.png";
 import tm from "/assets/time-management.png";
 import communcation from "/assets/communcation.png";
+
+const skills = [
+  { src: javascript, name: "JavaScript" },
+  { src: typescript, name: "TypeScript" },
+  { src: react, name: "React" },
+  { src: next, name: "Next.js" },
+  { src: redux, name: "Redux Toolkit" },
+  { src: html, name: "HTML5" },
+  { src: css, name: "CSS3" },
+  { src: tailwind, name: "Tailwind CSS" },
+  { src: sass, name: "SASS" },
+  { src: node, name: "Node.js" },
+  { src: express, name: "Express.js" },
+  { src: mongo, name: "MongoDB" },
+  { src: mysql, name: "MySQL" },
+  { src: api, name: "RESTful APIs" },
+  { src: Jest, name: "Jest" },
+  { src: docker, name: "Docker" },
+  { src: git, name: "Git" },
+  { src: github, name: "GitHub" },
+  { src: postman, name: "Postman" },
+  { src: agile, name: "Agile/Scrum" },
+  { src: ps, name: "Problem Solving" },
+  { src: ct, name: "Critical Thinking" },
+  { src: tm, name: "Time Management" },
+  { src: communcation, name: "Communication" },
+];
+
 function Skills() {
+  const skillsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = skillsRef.current.indexOf(
+              entry.target as HTMLDivElement
+            );
+            entry.target.classList.add("active");
+            entry.target.setAttribute(
+              "style",
+              `transition-delay: ${index * 100}ms`
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    skillsRef.current.forEach((skill) => {
+      if (skill) observer.observe(skill);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="Skills-page centered-section" id="skills">
+    <section className="Skills-page" id="skills">
       <h1>Skills</h1>
       <section className="skills-container">
-        <div className="skills-section">
-          <img src={javascript} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">JavaScript</div>
-        </div>
-        <div className="skills-section">
-          <img src={typescript} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">TypeScript</div>
-        </div>
-        <div className="skills-section">
-          <img src={react} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">React</div>
-        </div>
-        <div className="skills-section">
-          <img src={next} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">TypeScript</div>
-        </div>
-        <div className="skills-section">
-          <img src={redux} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Redux Toolkit</div>
-        </div>
-        <div className="skills-section">
-          <img src={html} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">HTML5</div>
-        </div>
-        <div className="skills-section">
-          <img src={css} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">CSS3</div>
-        </div>
-        <div className="skills-section">
-          <img src={tailwind} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Tailwind CSS</div>
-        </div>
-        <div className="skills-section">
-          <img src={sass} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">SASS</div>
-        </div>
-        <div className="skills-section">
-          <img src={node} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Node.js</div>
-        </div>
-        <div className="skills-section">
-          <img src={express} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Express.js</div>
-        </div>
-        <div className="skills-section">
-          <img src={mongo} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">MongoDB</div>
-        </div>
-        <div className="skills-section">
-          <img src={mysql} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">MySQL</div>
-        </div>
-        <div className="skills-section">
-          <img src={api} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">RESTful APIs</div>
-        </div>
-        <div className="skills-section">
-          <img src={Jest} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Jest</div>
-        </div>
-        <div className="skills-section">
-          <img src={docker} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Docker</div>
-        </div>
-        <div className="skills-section">
-          <img src={git} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Git</div>
-        </div>
-        <div className="skills-section">
-          <img src={github} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">GitHub</div>
-        </div>
-        <div className="skills-section">
-          <img src={postman} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Postman</div>
-        </div>
-        <div className="skills-section">
-          <img src={agile} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Agile/Scrum</div>
-        </div>
-        <div className="skills-section">
-          <img src={ps} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Problem Solving</div>
-        </div>
-        <div className="skills-section">
-          <img src={ct} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Critical Thinking</div>
-        </div>
-        <div className="skills-section">
-          <img src={tm} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Time Management</div>
-        </div>
-        <div className="skills-section">
-          <img src={communcation} alt="skill-img" className="skill-img"></img>
-          <div className="skill-name">Communcation</div>
-        </div>
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="skills-section"
+            ref={(el) => {
+              skillsRef.current[index] = el;
+            }}
+          >
+            <img src={skill.src} alt={skill.name} className="skill-img" />
+            <div className="skill-name">{skill.name}</div>
+          </div>
+        ))}
       </section>
     </section>
   );
 }
+
 export default Skills;

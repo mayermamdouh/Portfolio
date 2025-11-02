@@ -19,9 +19,7 @@
   color: var(--text-color);
   font-size: var(--h2-font-size);
 }
-.location,
-.number,
-.email {
+.content-item {
   width: 300px;
   border: 1px solid var(--title-color);
   border-radius: 10px;
@@ -42,5 +40,4 @@
 
 .details-contect {
   color: var(--text-color);
-  
 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
 import "./navbar.css";
 
 function Appbar() {
@@ -48,8 +49,9 @@ function Appbar() {
             <a href="#contact">Contact</a>
           </li>
         </ul>
-        <button onClick={toggleTheme} className="toggleButton">
-          {darkMode ? "Light" : "Dark"}
+
+        <button onClick={toggleTheme} className="icon-btn">
+          {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
         </button>
       </nav>
     </section>

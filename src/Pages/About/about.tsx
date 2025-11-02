@@ -1,9 +1,26 @@
+import { useEffect, useRef, useState } from "react";
 import "./about.css";
-function About() {
-  return (
-    <div className="about-container centered-section" id="about">
-      <h1>About Me</h1>
 
+function About() {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`about-container ${isVisible ? "visible" : ""}`}
+      id="about"
+    >
+      <h1>About Me</h1>
       <div className="information-section">
         <p>
           {`Hi! I'm Mayer Mamdouh Noshy, a passionate Frontend Developer based in Giza, Egypt. I specialize in building high-performance, scalable, and user-friendly web applications using modern technologies like React.js, Next.js, and TypeScript.`}
@@ -18,4 +35,5 @@ function About() {
     </div>
   );
 }
+
 export default About;

@@ -2,6 +2,7 @@ import "./project.css";
 import { Link } from "react-router-dom";
 
 const projects = [
+  { id: "food-ordering-app", title: "Food Ordering App" },
   { id: "engine-parts", title: "Engine Parts Sales Platform" },
   { id: "ai-exam", title: "AI-Powered Examination System" },
   { id: "sentiment-analysis", title: "Arabic Sentiment Analysis" },
@@ -17,7 +18,7 @@ function Projects() {
         {projects.map((project, index) => (
           <div key={index} className="project-container">
             <Link
-              className={`project-card project-${index + 1}`}
+              className={`project-card project-item project-${index + 1}`}
               to={`/projects/${project.id}`}
             >
               <div className="github-word">More Details</div>

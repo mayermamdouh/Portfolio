@@ -1,23 +1,31 @@
-// import smallPhoto from "../assets/smallPhoto.jpg";
+import { useEffect } from "react";
 import "./home.css";
 import Shapes from "./Shapes";
 import personalImage from "/assets/smallPhoto.jpg";
 import HeaderSocials from "./Socials";
 
 function HomePage() {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const nameElement = document.querySelector(".home-username");
+      if (nameElement) nameElement.classList.add("done");
+    }, 2200);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="home-container centered-section" id="home">
+    <div className="home-container " id="home">
       <div className="home-content">
         <img
           className="img-container"
           src={personalImage}
           alt="personal image"
-        ></img>
+        />
         <div className="home-username">Mayer Mamdouh</div>
         <p className="home-description">Front-End Developer</p>
         <HeaderSocials footer={false} />
         <a
-          href="https://drive.google.com/file/d/1A14_ZFPgyiWivejruMX0kMXaGaqJO46f/view?usp=sharing"
+          href="https://drive.google.com/file/d/1IImpsG2TksgVxf4SANKHsnk0ciLeLL4Z/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="btn"

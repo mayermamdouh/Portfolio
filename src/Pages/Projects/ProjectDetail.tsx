@@ -84,6 +84,22 @@ const projectData: Record<string, Project> = {
 
     photos: ["/assets/event-1.png", "/assets/event-2.png"],
   },
+  "food-ordering-app": {
+    title: "Food Ordering App",
+    description: `
+    Developed a full-stack multilingual food ordering platform with user and admin roles, Implemented authentication (NextAuth), personal profiles, category-based browsing, item customization, cart, and secure
+checkout, Built an admin dashboard for managing users, categories, products, sizes, extras, and orders with real-time updates.`,
+    technologies:
+      "Next.js 14, Prisma, PostgreSQL, NextAuth, Redux Toolkit, ShadCN UI, Tailwind CSS, Vercel",
+    role: "Full Stack Developer",
+    date: "Sep 2025",
+    link: "https://github.com/mayermamdouh/food-ordering-app",
+
+    extraLink: {
+      href: "https://food-ordering-app-8x4l.vercel.app/en",
+      text: "DEMO",
+    },
+  },
 };
 
 function ProjectDetail() {

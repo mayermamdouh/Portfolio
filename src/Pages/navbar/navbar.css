@@ -3,19 +3,24 @@
   z-index: 100;
 }
 
-.toggleButton {
-  padding: 5px 10px;
-  margin-right: 10px;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  color: #fff;
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
   background-color: var(--first-color);
-  font-weight: bold;
-  font-size: 15px;
-  text-decoration: none;
-  width: 80px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 10px;
 }
-.toggleButton:hover{
+
+.icon-btn:hover {
+  transform: scale(1.1) rotate(10deg);
   background-color: hsl(353, 58%, 52%);
 }
 
@@ -43,6 +48,7 @@
   list-style: none;
   gap: 5px;
 }
+
 .navbar-list li {
   position: relative;
   font-size: var(--normal-font-size);
